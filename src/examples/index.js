@@ -2,17 +2,17 @@
  * 路由组件出口文件
  */
 import Home from './home/home';
+import Analysis from './home/analysis';
+import Monitor from './home/monitor';
+import Workplace from './home/workplace';
 
 //ui
 import QRCode from './UI/QRCode';
 import Copy from './UI/Copy'
 import NProgress from './UI/NProgress'
 import SlidingValidation from './UI/SlidingValidation' //滑动验证
-import NoticeIcon from './UI/NoticeIcon' //通知菜单
-import HeaderSearch from './UI/HeaderSearch' //顶部搜索框
 import RichText from './UI/RichText' //富文本
 import Ellipsis from './UI/Ellipsis' //文本自动省略
-import CountDown from "./UI/CountDown" //自动计时
 import DropTree from "./UI/DropTree" //拖拽树形图
 import Color from "./UI/Color" //拾色器
 import QTable from "./UI/Table" //
@@ -21,8 +21,27 @@ import ReactMarkdown from "./UI/ReactMarkdown" //
 import Resizable from "./UI/Resizable" //
 
 
+
 //动画
 import BasicAnimations from "./animation/BasicAnimations"
+
+
+//pro
+import Authorized from "./pro/authorized";
+import Login from "./pro/login";
+import GlobalFooter from "./pro/GlobalFooter";
+import DescriptionList from "./pro/DescriptionList";
+import FooterToolbar from "./pro/FooterToolbar";
+import NumberInfo from "./pro/NumberInfo";
+import Trend from "./pro/Trend";
+import AvatarList from "./pro/AvatarList";
+import TagSelect from "./pro/TagSelect";
+import NoticeIcon from './pro/NoticeIcon' //通知菜单
+import HeaderSearch from './pro/HeaderSearch' //顶部搜索框
+import CountDown from "./pro/CountDown" //自动计时
+import Ip from "./pro/ip" //ip地址输入
+import Strength from "./pro/Strength" //Strength强度确认
+
 
 //util
 import webSocket from './util/webSocket'
@@ -30,6 +49,7 @@ import Language from './util/Language'
 import Screenfull from './util/screenfull'
 import Theme from "./util/theme";
 import Utiles from "./util/Utiles";
+
 //antd
 import Button from './antd/button'
 import Icon from './antd/icon'
@@ -115,12 +135,18 @@ import Dcharts from "./charts/3DCharts"
 import DropCharts from "./charts/DropCharts"
 import Dynamic_timeCharts from "./charts/Dynamic_timeCharts"
 import K_line_graph from "./charts/K_line_graph"
+import Gauge from './charts/Gauge'
+import Pie_custom from './charts/Pie_custom' 
+import Scatter from './charts/Scatter'
 export default {
     Home,
     QRCode,
     Copy,
     NProgress,
     SlidingValidation,
+    Analysis,
+    Monitor,
+    Workplace,
     
     NoticeIcon,
     HeaderSearch,
@@ -133,6 +159,8 @@ export default {
     ContextMenu,
     ReactMarkdown,
     Resizable,
+    Ip,
+    Strength,
     //动画
     BasicAnimations,
 
@@ -142,6 +170,16 @@ export default {
     Screenfull,
     Theme,
     Utiles,
+    Authorized,
+    Login,
+    GlobalFooter,
+    DescriptionList,
+    FooterToolbar,
+    NumberInfo,
+    Trend,
+    AvatarList,
+    TagSelect,
+
     //antd
 
     /*----DataDisplay start ---------*/
@@ -227,4 +265,7 @@ export default {
     DropCharts,
     Dynamic_timeCharts,
     K_line_graph,
+    Gauge,
+    Pie_custom,
+    Scatter,
 }

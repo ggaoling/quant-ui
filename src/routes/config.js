@@ -1,6 +1,21 @@
 export default {
     menus: [    // 菜单相关路由
-        { key: '/app/home', title: '首页', icon: 'qd0', component: 'Home' },
+        { key: '/app/home', title: '首页', icon: 'qd0',
+          subs: [
+              {
+                  key: '/app/home/process', title: "进度页", component: 'Home',
+              }, 
+              {
+                  key: '/app/home/workplace', title: "工作台", component: 'Workplace',
+              },
+              {
+                  key: '/app/home/analysis', title: "分析页", component: 'Analysis',
+              },
+              {
+                  key: '/app/home/monitor', title: "监控页", component: 'Monitor',
+              }
+          ],
+        },
         {
             key: '/app/antd', title: 'antd', icon: 'qdantdesign',
             subs: [
@@ -10,6 +25,14 @@ export default {
                         { key: '/app/antd/General/button', title: 'button组件', component: 'Button' },
                         { key: '/app/antd/General/Icon', title: 'Icon图标', component: 'Icon' },
                     ],
+                },
+                {
+                    key:'/app/antd/Layout',title:'Layout组件',icon:'qdiconlayout',
+                    subs:[
+                        {key:'/app/antd/Layout/Grid',title:'Grid栅栏',component:'Grid'},
+                        {key:'/app/antd/Layout/Layout',title:'Layout布局',component:'Layout'},
+
+                    ]
                 },
                 /*-------------Navigation start ------------------*/
                 {
@@ -88,16 +111,9 @@ export default {
 
                 },
                 /*-------------END ------------------*/
+                
                 {
-                    key:'/app/antd/Layout',title:'Layout组件',icon:'',
-                    subs:[
-                        {key:'/app/antd/Layout/Grid',title:'Grid栅栏',component:'Grid'},
-                        {key:'/app/antd/Layout/Layout',title:'Layout布局',component:'Layout'},
-
-                    ]
-                },
-                {
-                    key:'/app/antd/Other',title:'Other组件',icon:'',
+                    key:'/app/antd/Other',title:'Other组件',icon:'qdother',
                     subs:[
                         {key:'/app/antd/Other/Anchor',title:'Anchor锚点',component:'Anchor'},
                         {key:'/app/antd/Other/BackTop',title:'BackTop回到顶部',component:'BackTop'},
@@ -116,17 +132,15 @@ export default {
                 { key: '/app/ui/Copy', title: '右键复制', component: 'Copy' },
                 { key: '/app/ui/nprogress', title: '顶部进度条', component: 'NProgress' },
                 { key: '/app/ui/SlidingValidation', title: '滑动验证', component: 'SlidingValidation' },
-                { key: '/app/ui/NoticeIcon', title: '通知菜单', component: 'NoticeIcon' },
-                { key: '/app/ui/HeaderSearch', title: '顶部搜索框', component: 'HeaderSearch' },
                 { key: '/app/ui/Ellipsis', title: '文本自动省略号', component: 'Ellipsis' },
                 { key: '/app/ui/RichText', title: '富文本', component: 'RichText' },
-                { key: '/app/ui/CountDown', title: '倒计时', component: 'CountDown' },
 				{ key: '/app/ui/ContextMenu', title: '环境菜单', component: 'ContextMenu' },
                 { key: '/app/ui/DropTree', title: '拖拽树形图', component: 'DropTree' },
                 { key: '/app/ui/color', title: '拾色器', component: 'Color' },
                 { key: '/app/ui/Table', title: '复杂table', component: 'QTable' },
                 { key: '/app/ui/ReactMarkdown', title: 'Markdown语法翻译', component: 'ReactMarkdown' },
                 { key: '/app/ui/Resizable', title: '尺寸改变', component: 'Resizable' },
+                
                 
             ],
         },
@@ -137,6 +151,27 @@ export default {
             ],
         },
         {
+            key: '/app/pro', title: '功能组件', icon: 'qd16',
+            subs: [
+                { key: '/app/pro/Authorized', title: 'Authorized权限', component: 'Authorized' },
+                { key: '/app/pro/Login', title: 'Login登录', component: 'Login' },
+                { key: '/app/pro/GlobalFooter', title: 'GlobalFooter全局页脚', component: 'GlobalFooter' },
+                { key: '/app/pro/DescriptionList', title: 'DescriptionList描述列表', component: 'DescriptionList' },
+                { key: '/app/pro/FooterToolbar', title: 'FooterToolbar底部工具栏', component: 'FooterToolbar' },
+                { key: '/app/pro/NumberInfo', title: 'NumberInfo数据文本', component: 'NumberInfo' },
+                { key: '/app/pro/Trend', title: 'Trend趋势标记', component: 'Trend' },
+                { key: '/app/pro/AvatarList', title: 'AvatarList用户头像列表', component: 'AvatarList' },
+                { key: '/app/pro/TagSelect', title: 'TagSelect标签选择器', component: 'TagSelect' },
+                { key: '/app/pro/HeaderSearch', title: 'HeaderSearch顶部搜索框', component: 'HeaderSearch' },
+                { key: '/app/pro/CountDown', title: 'CountDown倒计时', component: 'CountDown' },
+                { key: '/app/pro/NoticeIcon', title: 'NoticeIcon通知菜单', component: 'NoticeIcon' },
+                { key: '/app/pro/Ip', title: 'Ip地址输入', component: 'Ip' },
+                { key: '/app/pro/Strength', title: 'Strength密码强度', component: 'Strength' },
+                
+
+            ],
+        }, 
+        {
             key: '/app/util', title: '方法', icon: 'qd22',
             subs: [
                 { key: '/app/util/webSocket', title: 'webSocket链接', component: 'webSocket' },
@@ -144,6 +179,7 @@ export default {
                 { key: '/app/util/Screenfull', title: 'Screenfull全屏', component: 'Screenfull' },
                 { key: '/app/util/Theme', title: 'Theme主题', component: 'Theme' },
                 { key: '/app/util/Utiles', title: 'Utiles方法', component: 'Utiles' },
+                
                 
             ],
         }, {
@@ -156,15 +192,18 @@ export default {
         }, {
             key: '/app/charts', title: '可视化', icon: 'qdbar',
             subs: [
-                { key: '/app/charts/Line', title: '折线图', component: 'Line' },
-                { key: '/app/charts/Bar', title: '柱状图', component: 'Bar' },
+                { key: '/app/charts/Line', title: '折线图', component: 'Line'},
+                { key: '/app/charts/Bar', title: '柱状图', component: 'Bar'},
+                { key: '/app/charts/Scatter', title: '散点图', component: 'Scatter'},
                 { key: '/app/charts/Diagram', title: '关系图', component: 'Diagram' },
                 { key: '/app/charts/Diagram1', title: '关系图-复杂', component: 'Diagram1' },
                 { key: '/app/charts/Diagram2', title: '组织图', component: 'Diagram2' },
                 { key: '/app/charts/Dcharts', title: '3D图', component: 'Dcharts' },
                 { key: '/app/charts/DropCharts', title: '可拖拽图表', component: 'DropCharts' },
-                { key: '/app/charts/Dynamic_timeCharts', title: '动态数据+时间坐标轴', component: 'Dynamic_timeCharts' },
+                { key: '/app/charts/Dynamic_timeCharts', title: '动态数据+时间坐标轴', component: 'Dynamic_timeCharts'},
                 { key: '/app/charts/K_line_graph', title: 'k线图', component: 'K_line_graph' },
+                { key: '/app/charts/Gauge', title: '仪表盘', component: 'Gauge'},
+                { key: '/app/charts/Pie_custom', title: '南丁格尔图', component: 'Pie_custom'},
             ],
         },
     ],

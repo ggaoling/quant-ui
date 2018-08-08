@@ -60,6 +60,15 @@ export { default as NoticeIcon } from './notice-icon';
 export { default as HeaderSearch } from './header-search';
 export { default as Ellipsis } from './ellipsis';
 export { default as CountDown } from './count-down';
+export { default as Login } from './login';
+export { default as GlobalFooter } from './global-footer';
+export { default as DescriptionList } from './description-list';
+export { default as FooterToolbar } from './footer-toolbar';
+export { default as NumberInfo } from './number-info';
+export { default as Trend } from './trend';
+export { default as AvatarList } from './avatar-list';
+export { default as TagSelect } from './tag-select';
+
 
 //方法
 export { default as webSocket } from './web-socket'; 
@@ -67,6 +76,8 @@ export { default as language } from './language';
 export { default as screenfull } from './screenfull';
 export { default as theme } from './theme';
 export { default as utils } from './utils';
+export { default as Resizable } from './resizable';
+
 
 //功能组件
 export { default as Editor } from './editor';        //富文本
@@ -79,6 +90,9 @@ export { default as colorPicker } from './color-picker';
 export { default as EntryTable } from './entry-table'; 
 export { default as QContextMenu } from './q-context-menu'; 
 export { default as ReactMarkdown } from './react-markdown';
+export { default as IpInput } from './ip-input';
+export { default as Strength } from './strength';  //密码强度
+
 //page
 export { default as NotFound } from './not-found';
 
